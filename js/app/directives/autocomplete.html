@@ -1,0 +1,13 @@
+<div class="autocomplete-box">
+    <input  ng-model="searchStr" type="text" placeholder="{{placeholder}}"  onmouseup="this.select();"   style="height: 29px;width: 500px;font-size: 18px;"/>
+    <div  class="autocomplete-dropdown" ng-if="showDropdown">
+        <div class="autocomplete-searching" ng-show="searching">Processing...</div>
+        <div class="autocomplete-searching" ng-show="!searching && (!results || results.length == 0)">No word matched</div>
+        <div class="autocomplete-row" ng-repeat="result in results" ng-mousedown="selectItems(result)"  ng-class="{'autocomplete-selected-row': $index == currentIndex}">
+
+            <div class="autocomplete-title" ng-if="matchClass" ng-bind-html="result.title"></div>
+            <div class="autocomplete-title" ng-if="!matchClass">{{ result.title }}</div>
+
+        </div>
+    </div>
+</div>

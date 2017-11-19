@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>AutoComplete Directive</title>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+
+    <link rel="stylesheet" href="css/autocomplete.css" />
+
+</head>
+
+<body ng-app="app">
+    <div ng-controller="AppController">
+        <h1>AutoComplete Directive</h1>
+        <div class="large-padded-row">
+            <h3>Start typing here</h3>
+            <div class="padded-row">
+                <autocomplete pause="400"  localdata="randomwords" searchfields="name" titlefield="name" minlength="1" inputclass="form-control form-control-small" matchclass="highlight" placeholder="Please start typing here" />
+            </div>
+        </div>
+        <script src="js/libs/angular.min.js"></script>
+        <script src="js/app/app.js"></script>
+        <script src="js/app/controllers/main-controller.js"></script>
+        <script src="js/app/directives/autocomplete.js"></script>
+    </div>
+</body>
+
+</html>
